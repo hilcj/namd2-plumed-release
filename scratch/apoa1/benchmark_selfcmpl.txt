@@ -1,0 +1,58 @@
+Charm++: standalone mode (not using charmrun)
+Charm++> Running in Multicore mode:  4 threads
+Charm++> Using recursive bisection (scheme 3) for topology aware partitions
+Converse/Charm++ Commit ID: v6.7.0-0-g46f867c-namd-charm-6.7.0-build-2015-Dec-21-45876
+Warning> Randomization of stack pointer is turned on in kernel, thread migration may not work! Run 'echo 0 > /proc/sys/kernel/randomize_va_space' as root to disable it, or try run with '+isomalloc_sync'.  
+CharmLB> Load balancer assumes all CPUs are same.
+Charm++> Running on 1 unique compute nodes (4-way SMP).
+Charm++> cpu topology info is gathered in 0.010 seconds.
+Info: Built with CUDA version 6000
+Did not find +devices i,j,k,... argument, using all
+Pe 0 physical rank 0 will use CUDA device of pe 2
+Pe 1 physical rank 1 will use CUDA device of pe 2
+Pe 2 physical rank 2 binding to CUDA device 0 on violilab23: 'GeForce GTX TITAN'  Mem: 6143MB  Rev: 3.5
+Info: NAMD 2.11 for Linux-x86_64-multicore-CUDA
+Info: 
+Info: Please visit http://www.ks.uiuc.edu/Research/namd/
+Info: for updates, documentation, and support information.
+Info: 
+Info: Please cite Phillips et al., J. Comp. Chem. 26:1781-1802 (2005)
+Info: in all publications reporting results obtained with NAMD.
+Info: 
+Info: Based on Charm++/Converse 60700 for multicore-linux64-iccstatic
+Info: Built Mon Dec 21 10:47:12 CST 2015 by jim on despina.ks.uiuc.edu
+Info: 1 NAMD  2.11  Linux-x86_64-multicore-CUDA  4    violilab23  desmond
+Info: Running on 4 processors, 1 nodes, 1 physical nodes.
+Info: CPU topology information available.
+Info: Charm++/Converse parallel runtime startup completed at 0.018908 s
+Pe 3 physical rank 3 will use CUDA device of pe 2
+CkLoopLib is used in SMP with a simple dynamic scheduling (converse-level notification) but not using node-level queue
+Info: 9.80859 MB of memory in use based on /proc/self/stat
+Info: Configuration file is apoa1.namd
+Info: Working in the current directory /home/desmond/Desktop/apoa1
+TCL: Suspending until startup complete.
+ERROR: The following variables were set in the
+ERROR: configuration file but are NOT VALID
+ERROR:    PRINT
+ERROR:    d1:
+FATAL ERROR: ERROR(S) IN THE CONFIGURATION FILE
+[0] Stack Traceback:
+  [0:0] CmiAbort+0x41  [0xefde44]
+  [0:1] _Z8NAMD_diePKc+0x93  [0x64a6c3]
+  [0:2] _ZN13SimParameters22initialize_config_dataEP10ConfigListRPc+0x66  [0xc73fa6]
+  [0:3] _ZN9NamdState14configListInitEP10ConfigList+0x299  [0xb860f9]
+  [0:4] _ZN9ScriptTcl3runEv+0x225  [0xc404a5]
+  [0:5] main+0x3fb  [0x64feeb]
+  [0:6] __libc_start_main+0xf5  [0x7fe61e9a0ec5]
+  [0:7] _ZNSt8ios_base4InitD1Ev+0x52  [0x5a7e4a]
+[0] Stack Traceback:
+  [0:0] LrtsAbort+0x70  [0xefe524]
+  [0:1] CmiAbortHelper+0x102  [0xefddfd]
+  [0:2] CmiAbort+0x41  [0xefde44]
+  [0:3] _Z8NAMD_diePKc+0x93  [0x64a6c3]
+  [0:4] _ZN13SimParameters22initialize_config_dataEP10ConfigListRPc+0x66  [0xc73fa6]
+  [0:5] _ZN9NamdState14configListInitEP10ConfigList+0x299  [0xb860f9]
+  [0:6] _ZN9ScriptTcl3runEv+0x225  [0xc404a5]
+  [0:7] main+0x3fb  [0x64feeb]
+  [0:8] __libc_start_main+0xf5  [0x7fe61e9a0ec5]
+  [0:9] _ZNSt8ios_base4InitD1Ev+0x52  [0x5a7e4a]

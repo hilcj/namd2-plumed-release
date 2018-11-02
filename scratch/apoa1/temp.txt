@@ -1,0 +1,50 @@
+Charm++: standalone mode (not using charmrun)
+Charm++> Running in Multicore mode:  4 threads
+Charm++> Using recursive bisection (scheme 3) for topology aware partitions
+Converse/Charm++ Commit ID: v6.7.0-0-g46f867c-namd-charm-6.7.0-build-2015-Dec-21-45876
+Warning> Randomization of stack pointer is turned on in kernel, thread migration may not work! Run 'echo 0 > /proc/sys/kernel/randomize_va_space' as root to disable it, or try run with '+isomalloc_sync'.  
+CharmLB> Load balancer assumes all CPUs are same.
+Charm++> Running on 1 unique compute nodes (4-way SMP).
+Charm++> cpu topology info is gathered in 0.014 seconds.
+Info: Built with CUDA version 8000
+Pe 1 physical rank 1 will use CUDA device of pe 2
+Did not find +devices i,j,k,... argument, using all
+Pe 0 physical rank 0 will use CUDA device of pe 2
+Info: NAMD 2.11 for Linux-x86_64-multicore-CUDA
+Info: 
+Info: Please visit http://www.ks.uiuc.edu/Research/namd/
+Info: for updates, documentation, and support information.
+Info: 
+Info: Please cite Phillips et al., J. Comp. Chem. 26:1781-1802 (2005)
+Info: in all publications reporting results obtained with NAMD.
+Info: 
+Info: Based on Charm++/Converse 60700 for multicore-linux64
+Info: Built Mon Feb 20 12:23:22 EST 2017 by desmond on violilab23
+Pe 3 physical rank 3 will use CUDA device of pe 2
+Info: 1 NAMD  2.11  Linux-x86_64-multicore-CUDA  4    violilab23  desmond
+Info: Running on 4 processors, 1 nodes, 1 physical nodes.
+Info: CPU topology information available.
+Info: Charm++/Converse parallel runtime startup completed at 0.0362289 s
+Pe 2 physical rank 2 binding to CUDA device 0 on violilab23: 'GeForce GTX TITAN'  Mem: 6079MB  Rev: 3.5
+CkLoopLib is used in SMP with a simple dynamic scheduling (converse-level notification) but not using node-level queue
+Info: 19.0039 MB of memory in use based on /proc/self/stat
+Info: Configuration file is /home/desmond/Mount/FLUX/apoa1/apoa1.na
+FATAL ERROR: Unable to access config file /home/desmond/Mount/FLUX/apoa1/apoa1.na
+[0] Stack Traceback:
+  [0:0] CmiAbortHelper+0x65  [0xbd1785]
+  [0:1]   [0xbd17db]
+  [0:2] _Z8NAMD_diePKc+0x84  [0x605fb4]
+  [0:3] _Z18after_backend_initiPPc+0x3eb  [0x60b79b]
+  [0:4] main+0x1a  [0x59c96a]
+  [0:5] __libc_start_main+0xf0  [0x7f8d1bcf0830]
+  [0:6] _start+0x29  [0x59fbc9]
+[0] Stack Traceback:
+  [0:0]   [0xbd0786]
+  [0:1] LrtsAbort+0x4b  [0xbd130b]
+  [0:2] CmiAbortHelper+0x6d  [0xbd178d]
+  [0:3]   [0xbd17db]
+  [0:4] _Z8NAMD_diePKc+0x84  [0x605fb4]
+  [0:5] _Z18after_backend_initiPPc+0x3eb  [0x60b79b]
+  [0:6] main+0x1a  [0x59c96a]
+  [0:7] __libc_start_main+0xf0  [0x7f8d1bcf0830]
+  [0:8] _start+0x29  [0x59fbc9]

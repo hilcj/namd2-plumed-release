@@ -1,0 +1,30 @@
+LDFLAGS="-L${HOME}/apps/plumed-2.4.2/build/lib ${LDFLAGS}"
+export LDFLAGS
+
+CFLAGS="-I${HOME}/apps/plumed-2.4.2/build/include ${CFLAGS}"
+export CFLAGS
+
+CPPFLAGS="-I${HOME}/apps/plumed-2.4.2/build/include ${CPPFLAGS}"
+export CPPFLAGS
+
+LD_LIBRARY_PATH="${HOME}/apps/plumed-2.4.2/build/lib:${LD_LIBRARY_PATH}"
+export LD_LIBRARY_PATH
+
+LIBRARY_PATH="${HOME}/apps/plumed-2.4.2/build/lib:$LIBRARY_PATH"
+export LIBRARY_PATH
+
+DYLD_LIBRARY_PATH="${HOME}/apps/plumed-2.4.2/build/lib:$DYLD_LIBRARY_PATH"
+export DYLD_LIBRARY_PATH
+
+PKG_CONFIG_PATH="${HOME}/apps/plumed-2.4.2/build/lib/pkgconfig:${PKG_CONFIG_PATH}"
+export PKG_CONFIG_PATH
+
+PATH="${HOME}/apps/plumed-2.4.2/build/bin/:$PATH"
+export PATH
+
+PLUMED_KERNEL="${HOME}/apps/plumed-2.4.2/build/lib/libplumedKernel.so"
+export PLUMED_KERNEL
+
+PLUMED_VIMPATH="${HOME}/apps/plumed-2.4.2/build/lib/plumed/vim"
+export PLUMED_VIMPATH
+
