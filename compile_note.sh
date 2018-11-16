@@ -15,6 +15,10 @@ make install;
 APPDIR=${HOME}/apps/
 LOCAL_DIR=${HOME}/.local
 mkdir $APPDIR
+cd $APPDIR;
+git clone https://github.com/hilcj/namd2-plumed-release;
+mv namd2-plumed-release release;
+
 
 # 1. Compile plumed.
 PLUMED=plumed-2.4.2
@@ -46,7 +50,7 @@ mkdir $NAMD
 cd $NAMD
 
 # Deploy source file.
-cp ${HOME}/apps/release/${NAMD_SOURCE}
+cp -rf ${HOME}/apps/release/${NAMD_SOURCE} .
 cd $NAMD_SOURCE
 
 # Compile charmm
@@ -84,11 +88,11 @@ cd $NAMD_SOURCE
 ./config Linux-x86_64-g++ --charm-arch multicore-linux-x86_64 --with-cuda --with-fftw3
 plumed patch -p -e namd-2.13
 cd Linux-x86_64-g++
-make -j16;
+make -j4;
 cd ../
 mv Linux-x86_64-g++ ../build_plumed_cuda;
 cd ../
-ln build_plumed_cuda/namd2 ${LOCAL_DIR}/bin/namd2-plumed-cuda
+ln -f build_plumed_cuda/namd2 ${LOCAL_DIR}/bin/namd2-plumed-cuda
 
 
 # Complete version
