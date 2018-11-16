@@ -1,3 +1,14 @@
+cd ~/apps/; mkdir temp; cd temp;
+wget ftp://ftp.fftw.org/pub/fftw/fftw-3.3.8.tar.gz;
+tar xf *;
+
+cd fftw*;
+./configure --prefix ~/.local --enable-single;
+make -j4;
+make install;
+
+
+
 # On v23 do:
 # $   scp -r ~/apps/release vxx:~/apps/
 
@@ -13,8 +24,7 @@ mkdir $PLUMED
 cd $PLUMED
 
 # Deploy source file.
-cp ${HOME}/apps/release/${PLUMED_SOURCE}.tgz .
-tar xf ${PLUMED_SOURCE}.tgz
+cp -rf ${HOME}/apps/release/${PLUMED_SOURCE} .
 cd $PLUMED_SOURCE
 
 # Build
@@ -36,8 +46,7 @@ mkdir $NAMD
 cd $NAMD
 
 # Deploy source file.
-cp ${HOME}/apps/release/${NAMD_SOURCE}.tar.gz .
-tar xf ${NAMD_SOURCE}.tar.gz
+cp ${HOME}/apps/release/${NAMD_SOURCE}
 cd $NAMD_SOURCE
 
 # Compile charmm
